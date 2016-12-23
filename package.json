@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/CaptainStack/voting-client/issues"
   },
-  "homepage": "https://github.com/CaptainStack/voting-client#readme"
+  "homepage": "https://github.com/CaptainStack/voting-client#readme",
+  "devDependencies": {
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "babel": {
+    "presets": ["es2015", "react"]
+  }
 }
