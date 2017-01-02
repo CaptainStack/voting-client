@@ -1,9 +1,9 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-export React.createClass({
+export default React.createClass({
   mixins: [PureRenderMixin],
-  render: function () {
+  render: function() {
     return <div>Hello from results!</div>
   }
 });
