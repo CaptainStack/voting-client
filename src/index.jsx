@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router';
-import {createStore} from 'redux;
+import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducer';
 import App from './components/App';
@@ -21,13 +21,13 @@ store.dispatch({
 
 const routes = <Route component={App}>
   <Route path="/results" component={ResultsContainer} />
-  <Route path="/" component={Voting} />
+  <Route path="/" component={VotingContainer} />
 </Route>;
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={hashHistory}>{routes}</Router>,
-  </Provider>
+    <Router history={hashHistory}>{routes}</Router>
+  </Provider>,
   document.getElementById('app')
 );
 
