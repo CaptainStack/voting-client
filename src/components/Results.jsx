@@ -36,7 +36,7 @@ export const Results = React.createClass({
             Next
           </button>
         </div>
-      </div>
+      </div>;
   }
 });
 

@@ -67,7 +67,7 @@ describe('reducer', () => {
     }));
   });
 
-  it('handles VOTE by setting hasVoted,' () => {
+  it('handles VOTE by setting hasVoted', () => {
     const state = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
@@ -80,8 +80,9 @@ describe('reducer', () => {
     expect(nextState).to.equal(fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        hasVoted: 'Trainspotting'
-      }
+        tally: {Trainspotting: 1}
+      },
+      hasVoted: 'Trainspotting'
     }));
   });
 
@@ -92,7 +93,7 @@ describe('reducer', () => {
         tally: {Trainspotting: 1}
       }
     });
-    const action = {typeL 'VOTE', entry: 'Sunshine'};
+    const action = {type: 'VOTE', entry: 'Sunshine'};
     const nextState = reducer(state, action);
 
     expect(nextState).to.equal(fromJS({
@@ -121,11 +122,11 @@ describe('reducer', () => {
     };
     const nextState = reducer(initialState, action);
 
-    expect(nextState).to.equal({
+    expect(nextState).to.equal(fromJS({
       vote: {
         pair: ['Sunshine', 'Slumdog Millionaire']
       }
-    });
+    }));
   });
 
 });
